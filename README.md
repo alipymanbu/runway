@@ -1,64 +1,24 @@
-# Runway
+# runway
 
-[![CI/CD](https://github.com/rackspace/runway/actions/workflows/cicd.yml/badge.svg)](https://github.com/rackspace/runway/actions/workflows/cicd.yml)
-[![codecov](https://codecov.io/gh/rackspace/runway/branch/master/graph/badge.svg?token=Ku28I0RY80)](https://codecov.io/gh/rackspace/runway)
-[![PyPi](https://img.shields.io/pypi/v/runway?style=flat)](https://pypi.org/project/runway/)
-[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/rackspace/runway/master.svg)](https://results.pre-commit.ci/latest/github/rackspace/runway/master)
+本仓库是「runway」的安卓版本获取入口，附使用资料索引。
 
-![runway-example.gif](https://raw.githubusercontent.com/rackspace/runway/master/docs/source/images/runway-example.gif)
+## 安装文件资源（夸克网盘）
 
-Runway is a lightweight integration app designed to ease management of infrastructure tools.
+> **runway 安装文件资源（夸克网盘）**：[https://pan.quark.cn/s/1727d9d7270e](https://pan.quark.cn/s/1727d9d7270e)
 
-Its main goals are to encourage GitOps best-practices, avoid convoluted Makefiles/scripts (enabling identical deployments from a workstation or CI job), and enable developers/admins to use the best tool for any given job.
+## 官方项目
 
-## Features
+- 上游项目：[rackspace/runway](https://github.com/rackspace/runway)
 
-- Centralized environment-specific configuration
-- Automatic environment identification from git branches
-- Support of IAM roles to assume for each deployment
-- Terraform backend/workspace config management w/per-environment tfvars
-- Automatic terraform version management per-environment
+## 更多资料
 
-### Supported Deployment Tools
+- [下载与安装教程](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/runway/%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.md)
+- [常见问题与排查](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/runway/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B8%8E%E6%8E%92%E6%9F%A5.md)
+- [滤镜与调色教程](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/runway/%E6%BB%A4%E9%95%9C%E4%B8%8E%E8%B0%83%E8%89%B2%E6%95%99%E7%A8%8B.md)
+- [证件照换底色与换服装](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/runway/%E8%AF%81%E4%BB%B6%E7%85%A7%E6%8D%A2%E5%BA%95%E8%89%B2%E4%B8%8E%E6%8D%A2%E6%9C%8D%E8%A3%85.md)
+- [贴纸文字涂鸦马赛克怎么用](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/runway/%E8%B4%B4%E7%BA%B8%E6%96%87%E5%AD%97%E6%B6%82%E9%B8%A6%E9%A9%AC%E8%B5%9B%E5%85%8B%E6%80%8E%E4%B9%88%E7%94%A8.md)
+- [全部软件目录](https://github.com/alipymanbu/Android/blob/master/%E5%85%A8%E9%83%A8%E8%BD%AF%E4%BB%B6%E7%9B%AE%E5%BD%95.md)
 
-- AWS CDK
-- Serverless Framework
-- CFNgin (CloudFormation)
-- Static websites (build & deploy to S3+CloudFront)
-- Terraform
+---
 
-## Example
-
-A typical Runway configuration is unobtrusive -- it just lists the deployment order and locations (regions).
-
-```yml
-deployments:
-  - modules:
-      - resources.tf  # terraform resources
-      - backend.sls  # serverless lambda functions
-      - frontend  # static web site
-    environments:  # Environments
-      dev: "123456789012"  # AWS development Account ID
-      prod: "234567890123"  # AWS production Account ID
-    regions:
-      - us-east-1
-```
-
-The example above contains enough information for Runway to deploy all resources, lambda functions and a static website backed by S3 and Cloudfront in either dev or prod environments
-
-## Install
-
-```shell
-$ pip install runway
-$ runway new
-# OR
-$ poetry add --dev runway
-$ poetry run runway new
-```
-
-## Documentation
-
-See the [doc site](https://runway.readthedocs.io) for full documentation.
-
-Quickstart documentation, including CloudFormation templates and walkthrough can be found [here](https://runway.readthedocs.io/page/quickstart/index.html)
+> 本仓库由上游项目 fork 而来，原始说明见[上游仓库](https://github.com/rackspace/runway)。
